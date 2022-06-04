@@ -1,10 +1,10 @@
 // v 1.0.0
-import express from "express";
+import express, { Request, Response } from "express";
 
 const app = express();
 
 app.get("/", (req: Request, res: Response) => {
-  return res.send("From Express");
+  res.send("Hello World!");
 });
 
 app.listen(3000, () => {
