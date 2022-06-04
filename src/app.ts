@@ -1,5 +1,5 @@
 // v 1.0.0
-import express, { Request, Response } from "express";
+import express, { Request, Response, NextFunction } from "express";
 
 const app = express();
 app.use(express.json());
