@@ -3,7 +3,7 @@ import express from "express";
 
 const app = express();
 
-app.get((req: Request, res: Response) => {
+app.get("/", (req: Request, res: Response) => {
   return res.send("From Express");
 });
 
