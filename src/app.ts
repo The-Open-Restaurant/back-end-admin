@@ -1,18 +1,22 @@
 // v 1.0.0
 import express, { Request, Response, NextFunction } from "express";
+// Consolidate is a Template engine consolidation library.
+// https://github.com/tj/consolidate.js
+import cons from "consolidate";
 
+// Init Express
 const app = express();
+
+// Add Handlebars
+app.engine("handlebars", cons.handlebars);
+app.set("view engine", "handlebars");
+app.set("views", __dirname + "/views");
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get("/", (req: Request, res: Response) => {
-  res.send("Hello World!");
-});
-
-app.post("/api/data", (req: Request, res: Response) => {
-  console.log(req.body);
-
-  return res.sendStatus(200);
+app.get("/", function (req, res) {
+  res.render("home");
 });
 
 app.listen(3000, () => {
