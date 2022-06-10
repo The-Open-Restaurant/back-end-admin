@@ -336,13 +336,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bluebird@npm:^3.7.2":
-  version: 3.7.2
-  resolution: "bluebird@npm:3.7.2"
-  checksum: 869417503c722e7dc54ca46715f70e15f4d9c602a423a02c825570862d12935be59ed9c7ba34a9b31f186c017c23cac6b54e35446f8353059c101da73eac22ef
-  languageName: node
-  linkType: hard
-
 "body-parser@npm:1.20.0":
   version: 1.20.0
   resolution: "body-parser@npm:1.20.0"
@@ -494,15 +487,6 @@ __metadata:
   version: 1.1.0
   resolution: "console-control-strings@npm:1.1.0"
   checksum: 8755d76787f94e6cf79ce4666f0c5519906d7f5b02d4b884cf41e11dcd759ed69c57da0670afd9236d229a46e0f9cf519db0cd829c6dca820bb5a5c3def584ed
-  languageName: node
-  linkType: hard
-
-"consolidate@npm:^0.16.0":
-  version: 0.16.0
-  resolution: "consolidate@npm:0.16.0"
-  dependencies:
-    bluebird: ^3.7.2
-  checksum: f17164ffb2c4f79b4cbf685f1c76a49f59d329a40954b436425498861dc137b46fe821b2aadafa2dcfeb7eebd46846f35bd2c36b4a704d38521b4210a22a7515
   languageName: node
   linkType: hard
 
@@ -666,17 +650,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"express-handlebars@npm:^6.0.6":
-  version: 6.0.6
-  resolution: "express-handlebars@npm:6.0.6"
-  dependencies:
-    glob: ^8.0.2
-    graceful-fs: ^4.2.10
-    handlebars: ^4.7.7
-  checksum: b34253f9f783cdfd94e83aebde66712b45a8a90dd140e5da42335ee715dec39acf334465a290a3f7bd51ee23467c907ed059c7cae24cc9129bca16cc969d60f7
-  languageName: node
-  linkType: hard
-
 "express@npm:^4.18.1":
   version: 4.18.1
   resolution: "express@npm:4.18.1"
@@ -737,6 +710,13 @@ __metadata:
     statuses: 2.0.1
     unpipe: ~1.0.0
   checksum: 92effbfd32e22a7dff2994acedbd9bcc3aa646a3e919ea6a53238090e87097f8ef07cced90aa2cc421abdf993aefbdd5b00104d55c7c5479a8d00ed105b45716
+  languageName: node
+  linkType: hard
+
+"foreachasync@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "foreachasync@npm:3.0.0"
+  checksum: 4791f64b539b06c751b14adb2881173c780d41ce37d881715a5e5787fa4a08961f2c6a6cf3bccdfa48e56fb91d8676d867fdc63c008cdb576bd33261716e8381
   languageName: node
   linkType: hard
 
@@ -846,7 +826,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"glob@npm:^8.0.1, glob@npm:^8.0.2":
+"glob@npm:^8.0.1":
   version: 8.0.3
   resolution: "glob@npm:8.0.3"
   dependencies:
@@ -859,14 +839,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graceful-fs@npm:^4.2.10, graceful-fs@npm:^4.2.6":
+"graceful-fs@npm:^4.2.6":
   version: 4.2.10
   resolution: "graceful-fs@npm:4.2.10"
   checksum: 3f109d70ae123951905d85032ebeae3c2a5a7a997430df00ea30df0e3a6c60cf6689b109654d6fdacd28810a053348c4d14642da1d075049e6be1ba5216218da
   languageName: node
   linkType: hard
 
-"handlebars@npm:^4.7.7":
+"handlebars@npm:4.7.7":
   version: 4.7.7
   resolution: "handlebars@npm:4.7.7"
   dependencies:
@@ -904,6 +884,16 @@ __metadata:
   dependencies:
     function-bind: ^1.1.1
   checksum: b9ad53d53be4af90ce5d1c38331e712522417d017d5ef1ebd0507e07c2fbad8686fffb8e12ddecd4c39ca9b9b47431afbb975b8abf7f3c3b82c98e9aad052792
+  languageName: node
+  linkType: hard
+
+"hbs@npm:^4.2.0":
+  version: 4.2.0
+  resolution: "hbs@npm:4.2.0"
+  dependencies:
+    handlebars: 4.7.7
+    walk: 2.3.15
+  checksum: 811259d1bc6ecf94fca824df438167306a5f7e122b82aca59a3c593067c50175ce81c3de4d258b9cb19ae9ef5b91e8486282b5791191940bb5d8a298304965b5
   languageName: node
   linkType: hard
 
@@ -1799,9 +1789,8 @@ __metadata:
     "@types/consolidate": ^0.14.1
     "@types/express": ^4.17.13
     "@types/node": ^17.0.39
-    consolidate: ^0.16.0
     express: ^4.18.1
-    express-handlebars: ^6.0.6
+    hbs: ^4.2.0
     install: ^0.13.0
     ts-node-dev: ^2.0.0
     typescript: ^4.7.3
@@ -1999,6 +1988,15 @@ __metadata:
   version: 1.1.2
   resolution: "vary@npm:1.1.2"
   checksum: ae0123222c6df65b437669d63dfa8c36cee20a504101b2fcd97b8bf76f91259c17f9f2b4d70a1e3c6bbcee7f51b28392833adb6b2770b23b01abec84e369660b
+  languageName: node
+  linkType: hard
+
+"walk@npm:2.3.15":
+  version: 2.3.15
+  resolution: "walk@npm:2.3.15"
+  dependencies:
+    foreachasync: ^3.0.0
+  checksum: d494df1924656cc4881ff8f70474f80be10d07d0c899620e02ff8627e4f339f37e74d1b30b70e7a714d0b873b0dc8b20129a619c4b407b39949c756637ebe3a6
   languageName: node
   linkType: hard
 
