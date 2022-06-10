@@ -8,15 +8,20 @@ import cons from "consolidate";
 const app = express();
 
 // Add Handlebars
+
 app.engine("handlebars", cons.handlebars);
+cons.handlebars('./views/home.handlebars', { title: 'Tim', text: 'My App' }, function(err, html) {
+  if (err) throw err;
+  console.log(html);
+ });
 app.set("view engine", "handlebars");
 app.set("views", __dirname + "/views");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get("/", function (req, res) {
-  res.render("home");
+app.get("/", function (req: Request, res: Response) {
+  res.render("home", {layout: "main"});
 });
 
 app.listen(3000, () => {
