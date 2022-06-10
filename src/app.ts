@@ -10,10 +10,6 @@ const app = express();
 // Add Handlebars
 
 app.engine("handlebars", cons.handlebars);
-cons.handlebars('./views/home.handlebars', { title: 'Tim', text: 'My App' }, function(err, html) {
-  if (err) throw err;
-  console.log(html);
- });
 app.set("view engine", "handlebars");
 app.set("views", __dirname + "/views");
 
