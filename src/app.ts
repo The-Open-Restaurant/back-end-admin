@@ -15,6 +15,8 @@ app.set("views", __dirname + "/views");
 // Routes
 app.use('/', routes)
 
-app.listen(3000, () => {
-  console.log("Application running on http://localhost:3000");
+// run server
+const port = 5000;
+app.listen(port, () => {
+  console.log(`Application running on http://localhost:${port}`);
 });
