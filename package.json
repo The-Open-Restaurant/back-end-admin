@@ -9,7 +9,7 @@
   "repository": "https://github.com/The-Open-Restaurant/admin",
   "scripts": {
     "dev": "nodemon",
-    "devts": "ts-node-dev --respawn src/app.ts --watch *",  
+    "devts": "ts-node-dev --respawn src/app.ts --watch *",
     "watch": "sass --watch ./src/assets/scss/main.scss ./public/css/main.css"
   },
   "devDependencies": {

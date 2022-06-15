@@ -1,3 +1,4 @@
+import { requires } from "consolidate";
 import { Request, Response, NextFunction } from "express";
 const express = require("express");
 const router = express.Router();
@@ -17,5 +18,9 @@ router.get("/admin", function (req: Request, res: Response, next: NextFunction) 
     caption: "this totally works man!",
   });
 });
+
+// router.get("/test", function (req: Request, res: Response, next: NextFunction) {
+//   res.redirect("/test");
+// });
 
 module.exports = router;
