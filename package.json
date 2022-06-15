@@ -8,7 +8,8 @@
   "main": "app.js",
   "repository": "https://github.com/The-Open-Restaurant/admin",
   "scripts": {
-    "dev": "ts-node-dev --respawn src/app.ts --watch *",
+    "dev": "nodemon",
+    "devts": "ts-node-dev --respawn src/app.ts --watch *",  
     "watch": "sass --watch ./src/assets/scss/main.scss ./public/css/main.css"
   },
   "devDependencies": {
@@ -23,6 +24,7 @@
     "bootstrap-icons": "^1.8.3",
     "express": "^4.18.1",
     "hbs": "^4.2.0",
-    "install": "^0.13.0"
+    "install": "^0.13.0",
+    "sass": "^1.52.3"
   }
 }

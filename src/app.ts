@@ -8,15 +8,17 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Set Public folder for static resources
-app.use('/public', express.static('public'))
+app.use("/public", express.static("public"));
 
 // Add Handlebars
 app.set("view engine", "hbs");
 app.set("view options", { layout: false });
-app.set("views", __dirname + "/views");
+app.set("views", [__dirname + "/views", __dirname + "/views/admin"]);
+
 
 // Routes
-app.use('/', routes)
+app.use("/", routes);
+app.use("/admin", routes);
 
 // run server
 const port = 5000;
